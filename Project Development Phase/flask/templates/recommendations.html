@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Recommendations</title>
+    <style>
+        body {
+            background-image: url("img.jpg");
+            background-size: cover;
+            background-position: center;
+            color: black;
+            text-align: center;
+            padding: 50px; /* Adjust as needed */
+        }
+
+        table {
+            width: 80%; /* Adjust as needed */
+            margin: 20px auto; /* Center the table */
+            border-collapse: collapse;
+            background-color: #fff; /* Background color for the table */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a decorative effect */
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd; /* Border color between rows */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Background color for header row */
+        }
+    </style>
+</head>
+<body>
+    <h1>Restaurant Recommendations</h1>
+    <br>
+    <p>Recommendations for <strong>{{ restaurant_name }}</strong>:</p>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Recommended Restaurants</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for restaurant in recommended_restaurants %}
+                <tr>
+                    <td>{{ restaurant }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>
